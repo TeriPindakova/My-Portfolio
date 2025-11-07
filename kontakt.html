@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portfolio</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&family=Special+Gothic+Expanded+One&display=swap"
+            rel="stylesheet">
+        <script src="https://kit.fontawesome.com/a0ca1c32a2.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize/modern-normalize.css">
+        <link rel="stylesheet" href="style.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.9.179/pdf.min.js"></script>
+        <script src="main.js"></script>
+        <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+        <meta name="robots" content="noindex, nofollow">
+
+    </head>
+
+    <body>
+        <header>
+            <div class="contact-bar">
+                <div class="container">
+                    <ul class="menu-personal">
+                        <li><i class="fa fa-phone"></i><a href="tel:+420736123472">+420736123472</a></li>
+                        <li><i class="fa fa-envelope"></i><span id="email-link"></span></li>
+                    </ul>
+
+                    <ul class="menu-social">
+                        <li><a href="https://github.com/TeriPindakova" target="_blank" class="social-icon"><i
+                                    class="fa fa-github"></i></a></li>
+                        <li><a href="https://www.linkedin.com/in/bc-tereza-pin%C4%8F%C3%A1kov%C3%A1-76a676195/"
+                                target="_blank" class="social-icon"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href="https://www.instagram.com/teri_pindakova_art/" target="_blank"
+                                class="social-icon"><i class="fa fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <div class="nav-bar">
+
+                <div class="container-nav">
+
+                    <nav>
+                        <ul class="navigation">
+                            <li><a href="index.html"><i class="fa-solid fa-house fa-2x"></i>Domů</a></li>
+                            <li><a href="portfolio.html"><i class="fa-solid fa-palette fa-2x"></i>Portfolio</a></li>
+                            <li><a href="about.html"><i class="fa-solid fa-tree fa-2x"></i>O mně</a></li>
+                            <li><a href="kontakt.html"><i class="fa-solid fa-ghost fa-2x"></i>Kontakt</a></li>
+
+                        </ul>
+
+                    </nav>
+                    <h1>
+                        <a href="#" id="openCv">Bc. Tereza Pinďáková</a>
+                    </h1>
+                    <p>Nadšená studentka frontendu, budoucí Junior Frontend Web Developer</p>
+                    <div id="cvModal" class="modal">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <a href="pdf/zivotopis_pindakova.pdf" download class="download-btn"><i
+                                        class="fa-solid fa-download"></i></a>
+                                <button id="printCv" title="Tisk životopisu" class="print-btn"><i
+                                        class="fa-solid fa-print"></i></button>
+                                <span id="closeCv" class="close">&times;</span>
+                            </div>
+                            <canvas id="pdfCanvas"></canvas>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section class="kontakt-text">
+                <p>Dobrý den, můžete mě kontaktovat emailem nebo telefonicky, či přes sms pomocí kontaktů v záhlaví
+                    stránky.
+                <p>Nebo využijte tento formulář.</p>
+                </p>
+            </section>
+
+            <section class="contact-form">
+                <form action="https://formspree.io/f/xovpnaev" method="POST" class="form">
+
+                    <label for="name">Jméno a příjmení:
+                        <input type="text" id="name" name="name" size="50" required>
+                    </label>
+                    <label for="company">Společnost:
+                        <input type="text" id="company" name="company" size="50" required>
+                    </label>
+                    <label for="email">E-mail:
+                        <input type="email" id="email" name="email" size="50" required>
+                    </label>
+                    <label for="message">Zpráva:
+                        <textarea id="message" name="message" rows="5" size="50" required></textarea>
+                    </label>
+                    <label>
+                        <input type="checkbox" required>
+                        Souhlasím se zpracováním osobních údajů pro účely vyřízení vaší zprávy.
+                    </label>
+                    <button type="submit">Odeslat</button>
+                </form>
+
+                <p class="gdpr-note">
+                    Odesláním formuláře souhlasíte se zpracováním osobních údajů
+                    za účelem vyřízení vašeho dotazu.<br>
+                    Údaje neukládám a nesdílím s třetími stranami.
+                </p>
+
+            </section>
+
+        </main>
+
+        <footer>
+            <p>&copy; 2025 teri_pindakova_design</p>
+            <button id="toggle-dark"><i id="dark-icon" class="fa-solid fa-moon" style="color: #bdbdbd;"></i>
+                <span id="tooltip" class="tooltip"></span></button>
+            <p class="cookies-info">
+                Tento web nepoužívá cookies k analytickým ani marketingovým účelům.
+            </p>
+        </footer>
+    </body>
+
+</html>

@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portfolio</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&family=Special+Gothic+Expanded+One&display=swap"
+            rel="stylesheet">
+        <script src="https://kit.fontawesome.com/a0ca1c32a2.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize/modern-normalize.css">
+        <link rel="stylesheet" href="style.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.9.179/pdf.min.js"></script>
+        <script src="main.js" defer></script>
+        <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+        <meta name="robots" content="noindex, nofollow">
+
+    </head>
+
+    <body>
+        <header>
+            <div class="contact-bar">
+                <div class="container">
+                    <ul class="menu-personal">
+                        <li><i class="fa fa-phone"></i><a href="tel:+420736123472">+420736123472</a></li>
+                        <li><i class="fa fa-envelope"></i><span id="email-link"></span></li>
+                    </ul>
+
+                    <ul class="menu-social">
+                        <li><a href="https://github.com/TeriPindakova" target="_blank" class="social-icon"><i
+                                    class="fa fa-github"></i></a></li>
+                        <li><a href="https://www.linkedin.com/in/bc-tereza-pin%C4%8F%C3%A1kov%C3%A1-76a676195/"
+                                target="_blank" class="social-icon"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href="https://www.instagram.com/teri_pindakova_art/" target="_blank"
+                                class="social-icon"><i class="fa fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <div class="nav-bar">
+
+                <div class="container-nav">
+
+                    <nav>
+                        <ul class="navigation">
+                            <li><a href="index.html"><i class="fa-solid fa-house fa-2x"></i>Domů</a></li>
+                            <li><a href="portfolio.html"><i class="fa-solid fa-palette fa-2x"></i>Portfolio</a></li>
+                            <li><a href="about.html"><i class="fa-solid fa-tree fa-2x"></i>O mně</a></li>
+                            <li><a href="kontakt.html"><i class="fa-solid fa-ghost fa-2x"></i>Kontakt</a></li>
+
+                        </ul>
+
+                    </nav>
+
+                    <h1>
+                        <a href="#" id="openCv">Bc. Tereza Pinďáková</a>
+                    </h1>
+                    <p>Nadšená studentka frontendu, budoucí Junior Frontend Web Developer</p>
+                    <div id="cvModal" class="modal">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <a href="pdf/zivotopis_pindakova.pdf" download class="download-btn"><i
+                                        class="fa-solid fa-download"></i></a>
+                                <button id="printCv" title="Tisk životopisu" class="print-btn"><i
+                                        class="fa-solid fa-print"></i></button>
+                                <span id="closeCv" class="close">&times;</span>
+                            </div>
+                            <canvas id="pdfCanvas"></canvas>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </header>
+
+
+        <main class="main-about">
+            <section class="welcome-about">
+                <p>Vítejte. Těší mě, že se zajímáte o můj příběh a práci.</p>
+            </section>
+
+            <section class="section-who">
+                <div class="photo">
+                    <a href="images/teri.jpg"><img src="images/teri.jpg" alt="profilová fotka" class="photo"> </a>
+                </div>
+                <div class="container-about">
+                    <h2>
+                        Kdo jsem a kým chci být
+                    </h2>
+
+                    <p>Našla jsem se ve frontendu! <strong>Spojení logiky a kreativity</strong> je pro mě to pravé a
+                        jsem ráda, že jsem to konečně objevila.</p>
+                    <p>Jako esteticky založený člověk miluju barvy, design, ale taky jednoduchost a nepřeplácanost. S
+                        levou mozkovou hemisférou pak
+                        analyzuji a zkoumám, jak webovky fungují a hledám, co se dá vylepšit.</p>
+                    <p>Efektivita je pro mě důležitým aspektem v celém životě, jak pracovním, tak osobním.</p>
+                    <p>V současnosti se učím a zlepšuji tvorbou vlastních projektů a <strong>hledám příležitost jako
+                            Junior Frontend Web Developer.</strong></p>
+                    <quote class="inspirational-quote">„V životě je důležité, aby věci dávaly smysl, jinak jsou
+                        zbytečné.“</quote>
+                    <p>Tyto kroky přede mnou udělalo už spoustu lidí, nic nového jsem zatím nevymyslela. <strong>Můžu se
+                            ale
+                            porovnávat jen sama se sebou</strong>, ne s někým, jehož cesta je úplně jiná.
+                    <p>Učím se, baví mě to a zkoumám, co se dá. Během tří měsíců jsem vytvořila pět vlastních projektů,
+                        které jsem si kompletně vymyslela sama.</p>
+                    <p>A i když nejsou dokonalé, na každém z nich se učím a posouvám dál. To je <strong>to, co mě
+                            odlišuje a to, co mě opravdu baví.</strong>
+                    </p>
+
+                </div>
+            </section>
+
+
+            <section class="section-how">
+                <div class="container-about">
+                    <h2>
+                        Jak pracuji
+                    </h2>
+                    <p>Nejlépe se učím <strong>prakticky</strong>. Tvořením. Každý projekt je pro mě příležitostí
+                        vyzkoušet nové
+                        postupy, otestovat nápady a naučit se něco nového.</p>
+                    <p><strong>Nyní si jsem svým vlastním zadavatelem projektů i testerem.</strong> Mám ráda projekty v
+                        celistvé podobě, proto často tvořím vícestránkové weby místo jednotlivých jednoduchých stránek.
+                    </p>
+                    <p><strong>Hodím se však skvěle i do týmu,</strong> kde aktivně přispívám v diskuzích a při
+                        brainstormingu, kladu
+                        otázky, které pomáhají odhalit slabiny návrhů a najít lepší řešení, a zároveň přicházím s
+                        vlastními nápady.“</p>
+                    <p>Jako pomocníka používám ChatGPT, který považuji za dobrý nástroj, i když vím, že není bezchybný,
+                        proto ho „drtím“ otázkami, proč a jak věci fungují.</p>
+                    <p>Zkušenosti z mých předchozích prací mi pomohly rozvíjet logické myšlení díky nespočtu analýz a
+                        hodinám stráveným v Excelu.</p>
+                    <p>Učím se z chyb, umím si dát zpětnou vazbu, přizpůsobuju se a pracuji efektivně. <br>
+                        Vím taky, jak a kam se chci posouvat dál.
+                </div>
+            </section>
+
+            <section class="section-tech">
+                <div class="container-about">
+                    <h2>Nástroje a technologie</h2>
+                    <p>V každé práci jsem se musela rychle naučit pracovat s novými systémy.
+                        Ať už to byly interní
+                        programy úřadu práce, účetní software nebo firemní systémy v O2.
+                        Tato zkušenost mě naučila <strong>nebát se nových technologií</strong> a rychle se v nich
+                        zorientovat.
+                    </p>
+                    <p>Při certifikaci na webové aplikace jsem se seznámila s <strong>Javou</strong>, ale už v polovině
+                        kurzu jsem věděla, že samotný backend pro mě
+                        není ta správná cesta. Nicméně jsem se naučila základy syntaxe, logiky programování, OOP a práci
+                        se softwarem IntelliJ IDEA.</p>
+                    <p>V současnosti se zaměřuji na frontendový vývoj. Pracuji ve <strong>Visual Studio Code</strong>,
+                        využívám Adobe
+                        Photoshop pro grafiku, Google Console pro ladění a různé online nástroje pro práci s barvami,
+                        ikonami a efekty.</p>
+                    <p>Ovládám <strong>HTML a CSS</strong>, aktivně se učím <strong>JavaScript</strong> a postupně
+                        přecházím k frameworkům.</p>
+                    <p>Učení beru jako nikdy nekončící proces. I teď, když čtete tyto řádky, už pravděpodobně umím
+                        něco, co jsem včera ještě nevěděla.</p>
+                </div>
+            </section>
+
+
+            <section class="section-ref">
+                <div class="container-about">
+
+                    <h2>Reference a úspěchy</h2>
+
+                    <p>Každý krok, který udělám mě posouvá o něco dál, ať už profesně nebo osobně.
+                        Níže najdete pár z nich, které pro mě měly v poslední době největší význam.
+                    </p>
+                    <ul>
+                        <li>
+                            <h3>Doporučení z minulé práce</h3>
+                            <p>Pracovní posudek od přímého nadřízeného ze společnosti O2 Czech republic.</p>
+                            <a href="images/PP.jpg" class="modal-trigger"><img src="images/PP.jpg"
+                                    alt="pracovní posudek" class="img-ref"></a>
+                        </li>
+
+                        <li>
+                            <h3>Certifikát Java Web ApplicationsW</h3>
+
+                            <p>Získaný v roce 2025 v rámci rozšiřování znalostí programování. I když jsem nakonec
+                                zamířila k frontendu, kurz mi pomohl pochopit logiku vývoje aplikací.</p>
+                            <a href="images/certifikat.jpg" class="modal-trigger"><img src="images/certifikat.jpg"
+                                    alt="pracovní posudek" class="img-ref"></a>
+                        </li>
+
+                        <li>
+                            <h3>Řidičský průkaz</h3>
+                            <p>Konečně jsem si udělala řidičák. Pro někoho samozřejmost, pro mě krásný nový úspěch.</p>
+                            <a href="images/auto.jpg" class="modal-trigger"><img src="images/auto.jpg"
+                                    alt="získaný řidičák" class="img-ref"></a>
+                        </li>
+
+                    </ul>
+                    <div id="imageModal" class="modal-about">
+                        <span class="modal-close-about">&times;</span>
+
+                        <span class="modal-prev-about">&#10094;</span>
+
+                        <img class="modal-content-about" id="modalImage">
+
+                        <span class="modal-next-about">&#10095;</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-story">
+                <div class="container-about">
+                    <h2>Můj příběh ve zkratce</h2>
+                    <p>Po absolvování bakalářského studia na Obchodně podnikatelské fakultě Slezské univerzity jsem
+                        nastoupila na Úřad práce, kde mě brzy frustrovala nadbytečná byrokracie.
+                        Následně jsem pracovala jako účetní, ale ani tato pozice mi nenabízela dostatečnou výzvu. Po
+                        třech letech mě opakující se procesy a omezené možnosti rozvoje přiměly hledat nové směry.
+                        V té době jsem se seznámila s partnerem a společně jsme se přestěhovali do Pardubic, kde začala
+                        nová kapitola mé kariéry.
+                        Nastoupila jsem do O2, kde jsem pět let zefektivňovala procesy, řídila jejich zpracování,
+                        poskytovala zpětnou vazbu na nové nápady a komunikovala s kolegy napříč různými týmy a
+                        odděleními.
+                        Po pěti letech jsem cítila, že kariérní růst a seberealizace jsou nedostatečné. Nakonec jsem
+                        svou
+                        pozici ztratila kvůli nadbytečnosti, kdy procesy byly natolik zautomatizované, že mé pracovní
+                        místo zaniklo.
+                        Po pečlivém zvážení dalších možností mě zaujala oblast IT, která mě nadchla svou logikou,
+                        dynamikou a kreativní stránkou, jež jsem objevila při tvorbě webových stránek.</p>
+                </div>
+            </section>
+
+
+            <section class="myKindOfWorld">
+                <div class="container-about">
+                    <h2>My kind of world</h2>
+
+                    <p>Kromě webových projektů maluji akvarelem, akrylem nebo prostě jen tak čmárám, ale taky vytvářím
+                        grafiku z linorytu ve spojení s akvarelovými malbami. Miluju
+                        cestování a objevování nových míst, a také jejich fotografování. </p>
+                    <a href="https://www.instagram.com/teri_pindakova_art/" target="_blank" class="social-icon"><i
+                            class="fa fa-instagram"></i>Tudy můžete nahlédnout do mé osobní tvorby</a>
+                    <p>Jsem filmový a seriálový nadšenec a gamer. Miluju deskovky a ráda se zúčastním pěkné únikovky.
+                        Nejvíce mě naplňuje příroda a hudba. Často mě tak potkáte na nějakém festivalu nebo koncertu
+                        rockové/metalové/punkové… hudby. </p>
+
+                </div>
+            </section>
+
+            <section class="section-thanks">
+                <div class="text-row">
+                    <p class="left">„Děkuji, že jste dočetli až sem. Budu ráda, pokud se se mnou spojíte, pokud Vás
+                        zaujaly mé zkušenosti a portfolio.“</p>
+                    <p class="right">„Vím, že se mám ještě spoustu co učit a vůbec se toho nebojím!“</p>
+                </div>
+                <div class="container">
+                    <ul>
+                        <li><a href="https://www.linkedin.com/in/bc-tereza-pin%C4%8F%C3%A1kov%C3%A1-76a676195/"
+                                target="_blank" class="social-icon"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href="https://www.instagram.com/teri_pindakova_art/" target="_blank"
+                                class="social-icon"><i class="fa fa-instagram"></i></a></li>
+                        <li><a href="tel:+420736123472" aria-label="+420736123472">
+                                <i class="fa fa-phone social-icon"></i></a></li>
+                        <li><i class="fa fa-envelope"></i><span id="email-link"></span></li>
+                    </ul>
+                </div>
+            </section>
+
+
+        </main>
+        <footer>
+            <p>&copy; 2025 teri_pindakova_design</p>
+            <button id="toggle-dark"><i id="dark-icon" class="fa-solid fa-moon" style="color: #bdbdbd;"></i>
+                <span id="tooltip" class="tooltip"></span></button>
+            <p class="cookies-info">
+                Tento web nepoužívá cookies k analytickým ani marketingovým účelům.
+            </p>
+        </footer>
+
+    </body>
+
+</html>

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portfolio</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&family=Special+Gothic+Expanded+One&display=swap"
+            rel="stylesheet">
+        <script src="https://kit.fontawesome.com/a0ca1c32a2.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize/modern-normalize.css">
+        <link rel="stylesheet" href="style.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.9.179/pdf.min.js"></script>
+        <script src="main.js"></script>
+        <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+        <meta name="robots" content="noindex, nofollow">
+
+    </head>
+
+    <body>
+        <header>
+            <div class="contact-bar">
+                <div class="container">
+                    <ul class="menu-personal">
+                        <li><i class="fa fa-phone"></i><a href="tel:+420736123472">+420736123472</a></li>
+                        <li><i class="fa fa-envelope"></i><span id="email-link"></span></li>
+                    </ul>
+
+                    <ul class="menu-social">
+                        <li><a href="https://github.com/TeriPindakova" target="_blank" class="social-icon"><i
+                                    class="fa fa-github"></i></a></li>
+                        <li><a href="https://www.linkedin.com/in/bc-tereza-pin%C4%8F%C3%A1kov%C3%A1-76a676195/"
+                                target="_blank" class="social-icon"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href="https://www.instagram.com/teri_pindakova_art/" target="_blank"
+                                class="social-icon"><i class="fa fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <div class="nav-bar">
+
+                <div class="container-nav">
+
+                    <nav>
+                        <ul class="navigation">
+                            <li><a href="index.html"><i class="fa-solid fa-house fa-2x"></i>Domů</a></li>
+                            <li><a href="portfolio.html"><i class="fa-solid fa-palette fa-2x"></i>Portfolio</a></li>
+                            <li><a href="about.html"><i class="fa-solid fa-tree fa-2x"></i>O mně</a></li>
+                            <li><a href="kontakt.html"><i class="fa-solid fa-ghost fa-2x"></i>Kontakt</a></li>
+
+                        </ul>
+
+                    </nav>
+                    <h1>
+                        <a href="#" id="openCv">Bc. Tereza Pinďáková</a>
+                    </h1>
+                    <p>Nadšená studentka frontendu a budoucí Junior Frontend Web Developer</p>
+                    <div id="cvModal" class="modal">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <a href="pdf/zivotopis_pindakova.pdf" download class="download-btn"><i
+                                        class="fa-solid fa-download"></i></a>
+                                <button id="printCv" title="Tisk životopisu" class="print-btn"><i
+                                        class="fa-solid fa-print"></i></button>
+                                <span id="closeCv" class="close">&times;</span>
+                            </div>
+                            <canvas id="pdfCanvas"></canvas>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </header>
+
+        <main class="main-portfolio">
+            <section class="welcome-about">
+                <p>Vítejte na stránce s portfoliem mých webových projektů.</p>
+                <quote class="inspirational-quote">„Existuje spoustu dokonalých a pěkných webů, ale i spousta těch, které potřebují inovaci.“</quote>
+            </section>
+
+
+
+
+            <section class="projects">
+
+                <div class="project">
+                    <div class="project-text">
+                        <h2>Webové portfolio</h2>
+                        <p>Tento projekt jsem si vymyslela, jelikož jsem postrádala stránku pro své portfolio. Linkedin
+                            má už tak moc funkcí, že se tam projekty snadno ztratí. Věřím, že nějaké stránky už
+                            existují, ale proč si nevytvořit svoji vlastní?</p>
+                        <p>Vytvořila jsem tedy jednoduchou stránku, na které prezentuji své webové
+                            projekty a zároveň jsem si procvičila své dovednosti ve frontendu.</p>
+                        <p>Při návrhu jsem se zaměřila na <strong>přehlednost, jednoduchost</strong> a příjemnou
+                            vizuální hierarchii.
+                            Chtěla jsem, aby web působil profesionálně, ale zároveň odrážel moji osobnost a kreativní
+                            přístup.</p>
+                        <p>Projekt obsahuje technologie <strong>HTML, CSS a JavaScript</strong> a je plně responzivní
+                            pro mobily. Nově jsem si vyzkoušela implementaci světlého a <strong>tmavého režimu</strong>.
+                        </p>
+                        <p>Taky jsem se dozvěděla jak, alespoň minimálně, chránit osobní údaje před boty.</p>
+                        <p>Do budoucna plánuji přidat dvojjazyčnou verzi a rozšířit portfolio o další projekty.</p>
+
+                    </div>
+
+                    <img src="images/sipkaR.png" class="arrow" alt="šipka">
+
+                    <div class="project-gallery">
+                        <a href="#" target="_blank"><img src="images/port1.jpg"></a>
+                        <a href="#" target="_blank"><img src="images/port2.jpg"></a>
+                        <a href="#" target="_blank"><img src="images/port3.jpg"></a>
+                    </div>
+
+                </div>
+
+                <div class="project">
+                    <div class="project-text">
+                        <h2>Vymazlená kuchařka</h2>
+                        <p>Protože doma rádi vaříme, rozhodla jsem se vytvořit vlastní online kuchařku s našimi
+                            oblíbenými a vylepšenými recepty.</p>
+
+                        <p>Projekt jsem postavila na technologiích <strong>HTML, CSS a JavaScript</strong>.</p>
+
+                        <p><strong>Logika filtrů funguje trochu
+                                jinak než obvykle</strong>. Nejprve si vybíráme, na co máme chuť (například podle typu
+                            masa,
+                            přílohy, kuchyně nebo pálivosti), a následně se zobrazí pouze recepty, které odpovídají této
+                            volbě.</p>
+
+                        <p>Máme tedy chuť třeba na krůtí maso, zvolíme ho, a poté si vybereme, zda chceme například
+                            rýži nebo brambory. Výsledkem je vždy recept s krůtím masem.</p>
+
+                        <p>Aby bylo přidávání nových receptů co nejpohodlnější, vytvořila jsem <strong>formulář</strong>
+                            napojený na
+                            službu Formspree. Do budoucna bych chtěla tento proces ještě více zautomatizovat, abych
+                            nemusela recepty přidávat ručně.</p>
+
+                        <p>Po vizuální stránce jsem se snažila navodit dojem <strong>opravdové kuchařky</strong>, tento
+                            design je
+                            nejlépe vidět na monitorech. Stránka je ale <strong>responzivní</strong>, takže se pohodlně
+                            používá i
+                            při vaření na mobilu či tabletu.</p>
+
+                        <p>Kuchařka je pro mě neustále živý projekt, protože obsahuje jen malý zlomek z toho, co vaříme.
+                            Nové recepty a nápady postupně přibývají.</p>
+                    </div>
+                    <img src="images/sipkaL.png" class="arrow" alt="šipka">
+                    <div class="project-gallery">
+                        <a href="https://teripindakova.github.io/Vymazlena-kucharka/index.html" target="_blank"><img
+                                src="images/kuch1.jpg"></a>
+                        <a href="https://teripindakova.github.io/Vymazlena-kucharka/index.html" target="_blank"><img
+                                src="images/kuch2.jpg"></a>
+                        <a href="https://teripindakova.github.io/Vymazlena-kucharka/index.html" target="_blank"><img
+                                src="images/kuch3.jpg"></a>
+                    </div>
+
+                </div>
+
+
+                <div class="project">
+                    <div class="project-text">
+                        <h2>Ptáci českých krajů</h2>
+                        <p>Jsem skrytý ornitolog, a proto jsem se rozhodla vytvořit stránku, která prezentuje různé
+                            druhy ptáků v českých krajích. Chtěla jsem mít své malé online „ptactvo“, přehledné a
+                            vizuálně atraktivní.</p>
+
+                        <p>Při tvorbě jsem využila technologie <strong>HTML a CSS</strong> a dbala na
+                            <strong>responzivitu pro mobilní zařízení</strong>. Jako vizuální prvek jsem použila
+                            <strong>video
+                                na pozadí</strong> hlavní stránky, které dodává webu živost a atmosféru, přičemž jsem
+                            nezapomněla ani
+                            na <strong>fallback</strong> pro zařízení, která video nepodporují.
+                        </p>
+
+                        <p>Do budoucna plánuji upravit layout a implementovat lepší zoom/out funkci, aby uživatelé mohli
+                            ptáky prohlížet pohodlněji a rychleji.</p>
+
+                        <p>Projekt mi zároveň pomohl lépe porozumět práci s multimediálním obsahem, optimalizaci videí a
+                            tvorbě responzivního designu pro různá zařízení.</p>
+
+                    </div>
+                    <img src="images/sipkaR.png" class="arrow" alt="šipka">
+                    <div class="project-gallery">
+                        <a href="https://teripindakova.github.io/Ptaci-ceskych-kraju/index.html" target="_blank"><img
+                                src="images/ptak1.jpg"></a>
+                        <a href="https://teripindakova.github.io/Ptaci-ceskych-kraju/index.html" target="_blank"><img
+                                src="images/ptak2.jpg"></a>
+                        <a href="https://teripindakova.github.io/Ptaci-ceskych-kraju/index.html" target="_blank"><img
+                                src="images/ptak3.jpg"></a>
+                    </div>
+
+                </div>
+
+
+                <div class="project">
+                    <div class="project-text">
+                        <h2>Útulek Dog's heart</h2>
+                        <p>Projekt <strong>Útulek Dog’s Heart</strong> vznikl jako ukázka webu pro útulek pro psy.
+                            Chtěla jsem vytvořit přehledné a přívětivé prostředí, které by mohlo pomoci při prezentaci
+                            pejsků k adopci.</p>
+                        <p>Byl to zároveň první projekt, kde jsem poprvé použila <strong>JavaScript</strong>. Pomocí něj
+                            jsem oživila web — například pro přepínání sekcí, jednoduché animace a interaktivní prvky.
+                        </p>
+                        <p>Při tvorbě jsem využila také <strong>HTML a CSS</strong> a zaměřila se na <strong>responzivní
+                                design</strong>, aby web fungoval pohodlně i na mobilních zařízeních.</p>
+                        <p>Tento projekt mi pomohl pochopit základy dynamiky webu a jak JavaScript dokáže posunout
+                            uživatelský zážitek o úroveň výš.</p>
+                    </div>
+                    <img src="images/sipkaL.png" class="arrow" alt="šipka">
+                    <div class="project-gallery">
+                        <a href="https://teripindakova.github.io/Dogs-heart/index.html" target="_blank"><img
+                                src="images/doggo1.jpg"></a>
+                        <a href="https://teripindakova.github.io/Dogs-heart/index.html" target="_blank"><img
+                                src="images/doggo2.jpg"></a>
+                        <a href="https://teripindakova.github.io/Dogs-heart/index.html" target="_blank"><img
+                                src="images/doggo3.jpg"></a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="project">
+                    <div class="project-text">
+                        <h2>Teri Pindakova art</h2>
+                        <p>Tento projekt byl mým úplně <strong>prvním</strong> pokusem o tvorbu webu. Chtěla jsem si
+                            vytvořit osobní
+                            galerii, kde bych mohla prezentovat své kresby a obrazy.</p>
+                        <p>Na tomto webu jsem se <strong>naučila základy</strong> HTML a CSS, jak pracovat s layoutem,
+                            barvami i
+                            typografií. Právě díky němu jsem objevila, že mě tvorba webů <strong>opravdu baví</strong>.
+                        </p>
+                        <p>Byla to první stránka, která spojila můj svět umění a technologií a položila tak
+                            <strong>základnní kámen</strong> mé
+                            současné tvorbě, kde se snažím, aby měl každý web duši.“
+                        </p>
+                        <p>Na tomto webu jsem rovněž dělala poprvé <strong>responzivitu</strong> pro mobil.</p>
+                    </div>
+                    <img src="images/sipkaR.png" class="arrow" alt="šipka">
+                    <div class="project-gallery">
+                        <a href="https://teripindakova.github.io/webstranka-Teri-Pindakova-art/index.html"
+                            target="_blank"><img src="images/terart1.jpg"></a>
+                        <a href="https://teripindakova.github.io/webstranka-Teri-Pindakova-art/index.html"
+                            target="_blank"><img src="images/terart2.jpg"></a>
+                        <a href="https://teripindakova.github.io/webstranka-Teri-Pindakova-art/index.html"
+                            target="_blank"><img src="images/terart3.jpg"></a>
+                    </div>
+
+
+                </div>
+
+            </section>
+
+        </main>
+
+        <footer>
+            <p>&copy; 2025 teri_pindakova_design</p>
+            <button id="toggle-dark"><i id="dark-icon" class="fa-solid fa-moon" style="color: #bdbdbd;"></i>
+                <span id="tooltip" class="tooltip"></span></button>
+            <p class="cookies-info">
+                Tento web nepoužívá cookies k analytickým ani marketingovým účelům.
+            </p>
+        </footer>
+
+    </body>
+
+</html>
