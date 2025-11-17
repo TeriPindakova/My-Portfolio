@@ -193,4 +193,52 @@ modalAbout.addEventListener('click', (e) => {
     modalAbout.style.display = "none";
   }
 });
+
+
+const galleryModal = document.querySelector(".modal-gallery");
+    const galleryModalImg = document.getElementById("modal-img");
+    const galleryImagesList = document.querySelectorAll(".gallery-container img");
+    const galleryCloseBtn = galleryModal.querySelector(".close");
+    const galleryPrevBtn = galleryModal.querySelector(".prev");
+    const galleryNextBtn = galleryModal.querySelector(".next");
+
+    let galleryCurrentIndex = 0;
+
+    // Otevření modalu kliknutím na obrázek
+    galleryImagesList.forEach((img, index) => {
+        img.addEventListener("click", () => {
+            galleryModal.style.display = "flex";
+            galleryModalImg.src = img.src;
+            galleryCurrentIndex = index;
+        });
+    });
+
+    // Zavření modalu
+    galleryCloseBtn.addEventListener("click", () => {
+        galleryModal.style.display = "none";
+    });
+
+    // Navigace šipkami
+    function showGalleryImage(index) {
+        if(index < 0) index = galleryImagesList.length - 1;
+        if(index >= galleryImagesList.length) index = 0;
+        galleryModalImg.src = galleryImagesList[index].src;
+        galleryCurrentIndex = index;
+    }
+
+    galleryPrevBtn.addEventListener("click", (e) => {
+        e.stopPropagation(); // aby se modal nezavřel
+        showGalleryImage(galleryCurrentIndex - 1);
+    });
+
+    galleryNextBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        showGalleryImage(galleryCurrentIndex + 1);
+    });
+
+    // Zavření kliknutím mimo obrázek
+    galleryModal.addEventListener("click", (e) => {
+        if(e.target === galleryModal) galleryModal.style.display = "none";
+    });
 });
+

@@ -418,6 +418,7 @@ h1 a:hover {
     margin-bottom: 10px;
     border-radius: 8px;
     transition: transform 0.3s;
+    cursor: pointer
 }
 
 .gallery {
@@ -443,9 +444,72 @@ h1 a:hover {
 }
 
 .gallery h2:hover {
-    color: rgba(9, 34, 26, 0.973);
+    color: rgb(48, 206, 193, 0.973);
+
 }
 
+.modal-gallery {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-gallery {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-gallery:target {
+    display: flex;
+}
+
+.modal-gallery .prev,
+.modal-gallery .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 40px;
+    color: white;
+    text-decoration: none;
+    padding: 0 10px;
+}
+
+.modal-gallery .prev {
+    left: 10px;
+}
+
+.modal-gallery .next {
+    right: 10px;
+}
+
+.modal-gallery .prev:hover,
+.modal-gallery .next:hover {
+    color: #ccc;
+}
+
+.modal-gallery .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 40px;
+    text-decoration: none;
+}
 
 /*footer*/
 footer {
@@ -541,6 +605,12 @@ body.dark .contact-bar {
     background-color: #343535;
     background: linear-gradient(85deg, #0f0f0f, #06413c, #0f0f0f);
     box-shadow: 0 4px 20px rgba(82, 82, 82, 0.8);
+}
+
+.gallery h2 {
+    color: rgb(23, 196, 158);
+
+
 }
 
 .dark footer {
@@ -1268,55 +1338,7 @@ strong {
 }
 
 /**----------------------------------------------------------------------------**/
-/* TABLET */
-@media (max-width: 1024px) {
 
-    .container,
-    .projects,
-    .section-who,
-    .section-how,
-    .section-tech,
-    .section-ref,
-    .contact-form {
-        max-width: 100%;
-        padding: 20px;
-    }
-
-    .project {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .project-gallery img {
-        max-width: 90%;
-    }
-
-    .section-tech .container-about {
-        column-count: 1;
-    }
-
-    .photo {
-        width: 220px;
-        height: 220px;
-    }
-
-    h1 {
-        font-size: 32px;
-        text-align: center;
-        margin: 30px auto;
-    }
-
-    .navigation {
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-
-    .contact-bar {
-        flex-direction: column;
-        height: auto;
-        padding: 10px 0;
-    }
-}
 
 /* MOBIL */
 @media (max-width: 768px) {
@@ -1338,16 +1360,23 @@ strong {
     }
 
     .menu-personal {
+        display: flex;
         flex-direction: column;
+        justify-content: flex-start;
         padding-bottom: 20px;
-        padding-left: 15px;
-        gap: 10px;
+        padding-left: 10px;
+        gap: 5px;
+        font-size: 10px;
+        
     }
 
     .menu-social {
         gap: 5px;
         display: flex;
         justify-content: flex-end;
+        padding-right: 15px;
+        padding-left: 0;
+        margin-left: 0; 
     }
 
     .menu-personal .fa {
@@ -1359,19 +1388,12 @@ strong {
         font-size: 28px;
     }
 
-    .navigation {
-        flex-direction: row;
-        align-items: center;
-        gap: 10px;
-        padding: 0 0 20px 0;
-        font-size: 15px;
-
-    }
 
     h1 {
         font-size: 1.8rem;
-        padding: 20px 0 20px 20px;
+        padding: 20px 100px 10px 10px;
         text-align: left;
+        margin-left: 10px;
 
     }
 
@@ -1381,6 +1403,23 @@ strong {
         padding: 0 20px 0 10px;
     }
 
+ .navigation li a {
+    display: flex;
+        gap: 3px;
+        font-size: 12px;   
+        flex-direction: column;   
+    }
+
+    .navigation li a i {
+        font-size: 20px;
+    }
+
+    .navigation {
+        flex-direction: row; 
+        justify-content: space-around; 
+        padding: 10px 0;
+        margin: 30px 20px;
+    }
 
     .hero {
         flex-direction: row;
@@ -1449,6 +1488,7 @@ strong {
 
     }
 
+
     .gallery-container {
         column-count: 2;
         padding: 0 10px;
@@ -1459,105 +1499,147 @@ strong {
         margin-bottom: 20px;
     }
 
-    .project {
-        flex-direction: column;
-        gap: 20px;
-        text-align: center;
+    .modal-gallery img {
+        max-width: 100%;
+        max-height: 100vh;
+        margin: 0 auto;
+        border-radius: 0;
+        box-shadow: none;
     }
 
-    .project-text h2 {
-        font-size: 26px;
-    }
-
-    .arrow {
-        width: 80px;
-    }
-
-    footer {
-        font-size: 0.9rem;
-        padding: 15px;
-    }
-
-    .kontakt-text {
-        font-size: 0.8rem;
-        padding: 0 20px;
-    }
-
-    .contact-form {
-        font-size: 0.8rem;
-    }
-
-    footer,
-    .cookies-info {
-        font-size: 0.5rem;
-    }
-
-    .welcome-about {
-        font-size: 0.8rem;
+    .modal-gallery .prev,
+    .modal-gallery .next {
+        font-size: 40px;
         padding: 10px;
     }
 
-    .arrow {
-        display: none;
+    .modal-gallery .close {
+        font-size: 30px;
+        top: 15px;
+        right: 20px;
     }
+    .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    .project {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+}
 
-    }
 
-    .projects>.project {
-        flex-direction: column !important;
-        align-items: center;
-        text-align: center;
-        gap: 1.5rem;
-    }
+.section-tech .container-about h2 {
+    column-span: all; /* nadpis přes oba sloupce */
+    display: block;   /* nutné pro column-span */
+    margin-bottom: 30px;
+}
+.section-tech .container-about p {
+    break-inside: avoid;
+    margin-bottom: 15px;
+}
 
-    .project-gallery {
-        gap: 1px;
-    }
 
-    .project-gallery img {
-        max-width: 100%;
-        transition: opacity 0.3s ease;
-    }
 
-    .project-gallery img:hover {
-        transform: none;
-        opacity: 0.8;
-    }
 
-    .inspirational-quote {
-        font-size: 1rem;
-        text-decoration: none;
-        padding-top: 20px;
-        margin-bottom: 30px;
-    }
+.project {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+}
 
-    .section-who {
-        flex-direction: column;
-        text-align: center;
-        padding: 20px;
-    }
+.project-text h2 {
+    font-size: 26px;
+}
 
-    .photo {
-        float: none;
-        shape-outside: none;
-        clip-path: circle(50%);
-        margin: 0 auto 20px auto;
-        display: block;
-    }
+.arrow {
+    width: 80px;
+}
 
-    .container-about {
-        text-align: center;
-    }
+footer {
+    font-size: 0.9rem;
+    padding: 15px;
+}
 
-    .section-who h2,
-    .container-about p {
-        text-align: center;
-    }
+.kontakt-text {
+    font-size: 0.8rem;
+    padding: 0 20px;
+}
+
+.contact-form {
+    font-size: 0.8rem;
+}
+
+footer,
+.cookies-info {
+    font-size: 0.5rem;
+}
+
+.welcome-about {
+    font-size: 0.8rem;
+    padding: 10px;
+}
+
+.arrow {
+    display: none;
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.projects>.project {
+    flex-direction: column !important;
+    align-items: center;
+    text-align: center;
+    gap: 1.5rem;
+}
+
+.project-gallery {
+    gap: 1px;
+}
+
+.project-gallery img {
+    max-width: 100%;
+    transition: opacity 0.3s ease;
+}
+
+.project-gallery img:hover {
+    transform: none;
+    opacity: 0.8;
+}
+
+.inspirational-quote {
+    font-size: 1rem;
+    text-decoration: none;
+    padding-top: 20px;
+    margin-bottom: 30px;
+}
+
+.section-who {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+}
+
+.photo {
+    float: none;
+    shape-outside: none;
+    clip-path: circle(50%);
+    margin: 0 auto 20px auto;
+    display: block;
+}
+
+.container-about {
+    text-align: center;
+}
+
+.section-who h2,
+.container-about p {
+    text-align: center;
+}
 
 
 .main-about,
@@ -1569,14 +1651,15 @@ strong {
 .myKindOfWorld,
 .section-thanks {
     width: 100%;
-    
+
     margin: 0;
     padding: 15px 10px;
     overflow-x: hidden;
 
 }
+
 .main-about {
-align-items: left;
+    align-items: center;
 }
 
 
@@ -1587,8 +1670,9 @@ align-items: left;
 .section-ref h2,
 .section-story h2,
 .myKindOfWorld h2,
-.section-thanks h2{
-font-size: 1.4rem;
+.section-thanks h2 {
+    font-size: 1.4rem;
+    
 }
 
 .section-who p,
@@ -1602,7 +1686,7 @@ font-size: 1.4rem;
 .section-tech h2,
 .section-story h2 {
     text-align: left;
-    
+
 }
 
 .section-how p,
@@ -1619,6 +1703,7 @@ font-size: 1.4rem;
 .section-thanks h2 {
     text-align: right;
 }
+
 .text-row {
     display: flex;
     font-size: 0.5rem;
@@ -1626,22 +1711,27 @@ font-size: 1.4rem;
     align-items: center;
     margin: 5px;
 }
-.text-row .left, .text-row .right {
+
+.text-row .left,
+.text-row .right {
     font-size: 0.5rem;
     padding: 0;
     margin: 0;
 }
+
 .section-how .container-about p {
     text-align: right;
 }
+
 .section-tech {
     padding-top: 50px;
 }
- 
+
 .modal-content-about {
     max-height: 30%;
 }
-.section-ref .container-about p{
+
+.section-ref .container-about p {
     margin-top: 5px;
 }
 
@@ -1651,16 +1741,17 @@ font-size: 1.4rem;
     color: #1ae0bf;
 }
 
-.section-story p{
-text-align: left;
- column-count: 1;
+.section-story p {
+    text-align: left;
+    column-count: 1;
     column-gap: 0;
 
 }
+
 .section-story h2 {
     text-align: left;
     padding: 0;
     margin: 0;
 }
-/**----------------------------------------------------------------------------**/
 }
+
